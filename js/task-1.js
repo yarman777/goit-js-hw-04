@@ -1,14 +1,8 @@
 function isEnoughCapacity(products, containerSize) {
-  // Загальна кількість товарів
   let totalQuantity = 0;
-
-  // Ітеруємося по ключам об'єкта products
   for (let product in products) {
-    // Додаємо кількість кожного товару до загальної кількості
     totalQuantity += products[product];
   }
-
-  // Перевіряємо, чи загальна кількість товарів менша або дорівнює containerSize
   return totalQuantity <= containerSize;
 }
 console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
